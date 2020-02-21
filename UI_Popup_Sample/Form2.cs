@@ -23,6 +23,7 @@ namespace UI_Popup_Sample
             close
 
         }
+
         public enum enmType
         {
             Success,
@@ -32,7 +33,9 @@ namespace UI_Popup_Sample
         }
         
         private Form2.enmAction action;
+
         private int x, y;
+
         public void showAlert(string msg, enmType type )
         {
             this.Opacity = 0.0;
@@ -41,8 +44,8 @@ namespace UI_Popup_Sample
             for (int i = 1; i < 10; i++)
             {
                 fname = "alert" + i.ToString();
-                Form2 frm = (Form2)Application.OpenForms[fname];
-                if (frm == null)
+                Form2 forma = (Form2)Application.OpenForms[fname];
+                if (forma == null)
                 {
                     this.Name = fname;
                     this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 15;
@@ -89,7 +92,7 @@ namespace UI_Popup_Sample
             switch(this.action)
             {
                 case enmAction.wait:
-                    timer1.Interval = 5000;
+                    timer1.Interval = 4000;
                     action = enmAction.close;
                     break;
 
