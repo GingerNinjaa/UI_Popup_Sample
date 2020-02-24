@@ -16,6 +16,7 @@ namespace UI_Popup_Sample
         {
             InitializeComponent();
         }
+
         public enum enmAction
         {
             wait,
@@ -32,7 +33,7 @@ namespace UI_Popup_Sample
             Info
         }
         
-        private Form2.enmAction action;
+        private enmAction action;
 
         private int x, y;
 
@@ -48,13 +49,16 @@ namespace UI_Popup_Sample
                 if (forma == null)
                 {
                     this.Name = fname;
+                    //od lewej
                     this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 15;
+                    //margines od dołu
                     this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - 5 * i;
                     this.Location = new Point(this.x, this.y);
                     break;
                 }
 
             }
+            //margines od prawej
             this.x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
             
             switch(type)
@@ -79,7 +83,7 @@ namespace UI_Popup_Sample
                     this.BackColor = Color.RoyalBlue;
                     break;
             }
-
+            //przypisanie tekstu z konstruktora
             this.label1.Text = msg;
             this.Show();
             this.action = enmAction.start;

@@ -24,21 +24,21 @@ namespace UI_Popup_Sample
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Alert("TEST MESSAGE", Form2.enmType.Success);
+            this.Alert("Succes", Form2.enmType.Success);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Alert("TEST MESSAGE", Form2.enmType.Warning);
+            this.Alert("Warning", Form2.enmType.Warning);
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Alert("TEST MESSAGE", Form2.enmType.Info);
+            this.Alert("Info", Form2.enmType.Info);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Alert("TEST MESSAGE", Form2.enmType.Error);
+            this.Alert("Error", Form2.enmType.Error);
         }
 
 
